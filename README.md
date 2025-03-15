@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# Kanban Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Kanban Board Icon](./board.svg)
 
-Currently, two official plugins are available:
+Kanban Board is a simple application that allows you to track issues from a GitHub repository in a Kanban-style board. You can enter the repository URL in the input field at the top of the page and press "Load" to fetch and display the issues.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Three Columns**:
+  - **ToDo**: All new issues.
+  - **In Progress**: Opened issues with an assignee.
+  - **Done**: Closed issues.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Repository Information**:
+  - View the profile of the repository owner.
+  - Visit the repository directly via the provided links.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## How to Use
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Enter Repository URL**:
+   - In the input field at the top of the page, enter the full URL of the GitHub repository (e.g., `https://github.com/user/repo`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Load Issues**:
+   - Click the "Load" button to fetch and display the issues in the Kanban board.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. **View Issues**:
+   - Issues will be categorized into three columns:
+     - **ToDo**: New issues without an assignee.
+     - **In Progress**: Opened issues with an assignee.
+     - **Done**: Closed issues.
+
+4. **Repository Links**:
+   - Under the input field, you will find links to:
+     - The profile of the repository owner.
+     - The repository itself.
+
+
