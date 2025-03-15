@@ -1,6 +1,6 @@
 # Kanban Board
 
-![Kanban Board Icon](./board.svg)
+![Kanban Board Icon](./public/board.svg)
 
 Kanban Board is a simple application that allows you to track issues from a GitHub repository in a Kanban-style board. You can enter the repository URL in the input field at the top of the page and press "Load" to fetch and display the issues.
 
